@@ -4,6 +4,7 @@ class ContextManager():
 
     def __enter__(self):
         print('inicjacja __enter__')
+        return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         print('inicjacja __exit__')
