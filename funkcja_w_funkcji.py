@@ -22,8 +22,8 @@ print(cube)
 #przykład 2
 
 def rejestracja(oplata):
-    def lista_zawodnikow():
-        return "jeteś na liście zawodników..."
+    def lista_zawodnikow(nrlisty):
+        return f"jeteś na liście zawodników nr {nrlisty}"
 
     def brak():
         return "brak wpłaty, za 3 dni zostaniesz usunięty z listy"
@@ -32,12 +32,12 @@ def rejestracja(oplata):
         return "błąd kodu wpłaty.."
 
     if oplata == 1:
-        return lista_zawodnikow()
+        return lista_zawodnikow
     elif oplata == 0:
         return brak
     else:
         return error
 
-print(rejestracja(1))
+print(rejestracja(1)(456))
 print(rejestracja(33)())
 print(rejestracja(0)())
