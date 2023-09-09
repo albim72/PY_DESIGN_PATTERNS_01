@@ -18,3 +18,26 @@ parz = list(filter(lambda x:x%2==0,liczba))
 print(parz)
 cube = list(map(lambda x:x**3,liczba))
 print(cube)
+
+#przykład 2
+
+def rejestracja(oplata):
+    def lista_zawodnikow():
+        return "jeteś na liście zawodników..."
+
+    def brak():
+        return "brak wpłaty, za 3 dni zostaniesz usunięty z listy"
+
+    def error():
+        return "błąd kodu wpłaty.."
+
+    if oplata == 1:
+        return lista_zawodnikow()
+    elif oplata == 0:
+        return brak
+    else:
+        return error
+
+print(rejestracja(1))
+print(rejestracja(33)())
+print(rejestracja(0)())
