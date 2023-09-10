@@ -13,13 +13,13 @@ class Pizza:
         self.dough = None
         self.sauce = None
         self.topping = []
-        
+
     def __str__(self):
         return self.name
-    
+
     def prepare_dough(self,dough):
         self.dough = dough
-        
+
         print(f'prepairing the {self.dough.name} dough of your {self}')
         time.sleep(STEP_DELAY)
         print(f'done with the {self.dough.name} dough')
