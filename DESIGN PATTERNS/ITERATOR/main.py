@@ -28,8 +28,11 @@ def main():
     team = FootballTeam(members)
     team_it = iter(team)
 
-    while True:
-        print(next(team_it))
+    # while True:
+    #     print(next(team_it))
+        
+    for member in team:
+        print(member)
 
 if __name__ == '__main__':
     main()
