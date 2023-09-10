@@ -40,7 +40,23 @@ class FileServer(Server):
     def kill(self, restart=True):
         print(f"Usuwanie {self}")
         self.state = State.restart if restart else State.zombie
-        
+
     def create_file(self,user,name,permission):
         print(f"próba utworzenia pliku '{name}' dla użytkownika '{user}' "
               f"z uprawnieniami {permission}")
+        
+class ProcessServer(Server):
+    def __init__(self):
+        self.name = "ProcessServer"
+        self.state = State.new
+
+    def boot(self):
+        print(f'Bootowanie systemu {self}')
+        self.state = State.running
+
+    def kill(self, restart=True):
+        print(f"Usuwanie {self}")
+        self.state = State.restart if restart else State.zombie
+
+    def create_process(self,user,name):
+        print(f"próba utworzenia procesu '{name}' dla użytkownika '{user}'.")
