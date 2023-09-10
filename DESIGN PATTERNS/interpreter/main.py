@@ -119,7 +119,7 @@ def main():
         'air condition':airco.turn_on,
         'heating':heating.turn_on,
         'boiler temperature':boiler.increase_temperature,
-        'fridge temeprature':fridge.increase_temperature
+        'fridge temperature':fridge.increase_temperature
 
     }
 
@@ -129,7 +129,7 @@ def main():
         'air condition': airco.turn_off,
         'heating': heating.turn_off,
         'boiler temperature': boiler.decrease_temperature,
-        'fridge temeprature': fridge.decrease_temperature
+        'fridge temperature': fridge.decrease_temperature
 
     }
 
